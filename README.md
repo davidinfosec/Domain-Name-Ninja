@@ -1,2 +1,2 @@
 # Domain-Finder
-Domain Finder is a Python script that I created to speed up the process in finding available domain names online. It's a simple script that takes 2 word lists, concatenates them together, and adds a TLD of choice. It also copies the output to clipboard and a textfile. The script is hard-coded and isn't optimized as it was just for personal use.
+A python script that was created as a solution for speeding up the process in finding available domain names. Concatenates two word lists, adds a desired TLD, runs a while loop, exports the desired amount of entries into a randomly named text file, automatically copies contents to clipboard, paste clipboard into bulk search solution like Name.com.
