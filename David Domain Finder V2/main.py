@@ -10,10 +10,10 @@ extension = (".com",)
 
 
 #change save paths
-save_path = 'C:/Users/David/PycharmProjects/David Domain Finder V2/exportedLists'
-ComboPath = 'C:/Users/David/PycharmProjects/David Domain Finder V2/Word Combos'
+save_path = 'C:/Users/<user>/PycharmProjects/David Domain Finder V2/exportedLists'
+ComboPath = 'C:/Users/<user>/PycharmProjects/David Domain Finder V2/Word Combos'
 
-#change file name
+#change file name prefix
 newList = "newList"
 
 #change file suffix & output
@@ -26,10 +26,10 @@ completeName = os.path.join(save_path, filename+".txt")
 #Enter file locations here to change combo lists
 
 #A
-ComboFileA = 'C:/Users/David/PycharmProjects/David Domain Finder V2/Word Combos/4L.txt'
+ComboFileA = 'C:/Users/<user>/PycharmProjects/David Domain Finder V2/Word Combos/4L.txt'
 
 #B
-ComboFileB = 'C:/Users/David/PycharmProjects/David Domain Finder V2/Word Combos/5 letter words.txt'
+ComboFileB = 'C:/Users/<user>/PycharmProjects/David Domain Finder V2/Word Combos/5 letter words.txt'
 
 #while loop
 count = 0
