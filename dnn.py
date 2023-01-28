@@ -100,6 +100,7 @@ def help():
     print("-wlP, --wordListPath\tPath to wordlists directory (default: 'wLists')")
     print("-L1, --wordList1\t\tPath to wordlist 1 (default: 'sampleList1.txt')")
     print("-L2, --wordList2\t\tPath to wordlist 2 (default: 'sampleList2.txt')")
+    print("-OA, --outputamount\t\tNumber of domains to output (default is 100)")
     print("-h, --help\t\tShow this help menu\n")
     print("Example: python dnn.py -TLD .com -sP my_results -wlP my_wordlists -L1 list1.txt -L2 list2.txt")
 
