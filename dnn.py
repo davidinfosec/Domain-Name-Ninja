@@ -77,6 +77,7 @@ with open(completeName, 'r') as f:
 
 with open(completeName, 'w') as f:
     # Section B Write lines to the text file
+    f.write("web browser test?")
     f.write("WordList1 and WordList2 have been combined and copied to your clipboard with your preferred TLD(s): " + ', '.join(TLDs) + '\n\n')
     f.write("WordList1: " + WordList1 + "\nWordList2: " + WordList2 + "\n\n")
     f.write("Check their availability at https://www.name.com/names using the bulk search utility, sort by price, and go! \n")
@@ -85,24 +86,19 @@ with open(completeName, 'w') as f:
     # End of Section B
     f.write('\n'.join(result_list))
 
-
-    
-
-    
-subprocess.Popen(completeName, shell=True)
-
+os.startfile(completeName)
 
 def help():
     print("Usage: python dnn.py [options]\n")
     print("Options:")
-    print("-TLD, --TLD\t\tDomain extension/TLD (default: '.com, .org, .co')")
-    print("-sP, --savePath\t\tPath to save the generated domain list (default: 'Results')")
-    print("-wlP, --wordListPath\tPath to wordlists directory (default: 'wLists')")
-    print("-L1, --wordList1\t\tPath to wordlist 1 (default: 'sampleList1.txt')")
-    print("-L2, --wordList2\t\tPath to wordlist 2 (default: 'sampleList2.txt')")
+    print("-TLD, --extension\t\tDomain extension/TLD (default: '.com')")
+    print("-RP, --resultspath\t\tPath to save the generated domain list (default: 'Results')")
+    print("-LP, --listpath\tPath to wordlists directory (default: 'Word Lists')")
+    print("-L1, --wordlist1\t\tPath to wordlist 1 (default: 'sampleList1.txt')")
+    print("-L2, --wordlist2\t\tPath to wordlist 2 (default: 'sampleList2.txt')")
     print("-OA, --outputamount\t\tNumber of domains to output (default is 100)")
     print("-h, --help\t\tShow this help menu\n")
-    print("Example: python dnn.py -TLD .com -sP my_results -wlP my_wordlists -L1 list1.txt -L2 list2.txt")
+    print("Example: python dnn.py -TLD '.com' -RP 'my_results' -LP 'my_wordlists' -L1 'list1.txt' -L2 'list2.txt'")
 
 def main():
     if __name__ == "__main__":
