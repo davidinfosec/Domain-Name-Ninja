@@ -9,22 +9,22 @@ import time
 random.seed(time.time())
 
 parser = argparse.ArgumentParser()
-parser.add_argument("-TLD", "--TLD", help="Domain extension/TLD", default=".com", type=str)
-parser.add_argument("-sP", "--savePath", help="Path to save the generated domain list", default='Results', type=str)
-parser.add_argument("-wlP", "--wordListPath", help="Path to wordlists directory", default='wLists', type=str)
-parser.add_argument("-L1", "--wordList1", help="Path to wordlist 1", default='sampleList1.txt', type=str)
-parser.add_argument("-L2", "--wordList2", help="Path to wordlist 2", default='sampleList2.txt', type=str)
+parser.add_argument("-TLD", "--extension", help="Domain extension/TLD", default=".com", type=str)
+parser.add_argument("-RP", "--resultspath", help="Path to save the generated domain list results", default='Results', type=str)
+parser.add_argument("-LP", "--listpath", help="Path to wordlists directory", default='Word Lists', type=str)
+parser.add_argument("-L1", "--wordlist1", help="Path to wordlist1", default='sampleList1.txt', type=str)
+parser.add_argument("-L2", "--wordlist2", help="Path to wordlist2", default='sampleList2.txt', type=str)
 args = parser.parse_args()
 
 #paths take in arguments
-save_path = args.savePath
-wL_path = args.wordListPath
+save_path = args.resultspath
+wL_path = args.listpath
 
 #change file name prefix
 newList = "newList"
 
 #TLD/Extension take in arguments
-TLDs = args.TLD.split(", ")
+TLDs = args.extension.split(", ")
 
 #change file suffix & output
 suffix = datetime.datetime.now().strftime("%y%m%d_%H%M%S")
@@ -34,16 +34,19 @@ filename = "_".join([newList, suffix]) # e.g. 'mylogfile_120508_171442'
 completeName = os.path.join(save_path, filename+".txt")
 
 #Enter file locations here to change combo lists
-WordList1 = os.path.join(wL_path, args.wordList1)
-WordList2 = os.path.join(wL_path, args.wordList2)
+WordList1 = os.path.join(wL_path, args.wordlist1)
+WordList2 = os.path.join(wL_path, args.wordlist2)
 
 #while loop
 count = 0
 add = count + 1
 
+
+#SectionA
 #writes file to directory specified above after loop
 with open(completeName, 'w') as f:
     def combineLists():
+        result_list = []  # Create an empty list to store the results
         count = 0
         while (count < 500):
             count = count + 1
@@ -51,32 +54,42 @@ with open(completeName, 'w') as f:
             resultA = (random.choice(open(WordList1).read().split()).strip())
             resultB = (random.choice(open(WordList2).read().split()).strip())
             randomOrder = random.choice("AB")
-            if (count > 1):
-                f.write('\n')
             if (randomOrder == "A"):
-                f.write(resultA + resultB + resultTLD)
+                domain = resultA + resultB + resultTLD
             else:
-                f.write(resultB + resultA + resultTLD)
+                domain = resultB + resultA + resultTLD
+            result_list.append(domain)  # Append the domain to the result list
+            f.write(domain)  # Write the domain to the file
+            if (count < 500):
+                f.write('\n')
+        return result_list  # Return the result list
+    
+    # Execute the function and store the result list in a variable
+    result_list = combineLists()
 
+with open(completeName, 'r') as f:
+    # Copy contents of text file to clipboard
+    pyperclip.copy(f.read())
+    
+    #print success
+    print("WordList1 and WordList2 have been combined and copied to your clipboard with your preferred TLD(s): " + ', '.join(TLDs))
 
-    #prints and writes a console/file completion message
-    print("WordList1 and WordList2 have been combined with your preferred TLD(s): " + ', '.join(TLDs))
-
-    #executes function
-    combineLists()
-
-# Open the file for writing in the beginning
 with open(completeName, 'w') as f:
+    # Section B Write lines to the text file
     f.write("WordList1 and WordList2 have been combined and copied to your clipboard with your preferred TLD(s): " + ', '.join(TLDs) + '\n\n')
     f.write("WordList1: " + WordList1 + "\nWordList2: " + WordList2 + "\n\n")
     f.write("Check their availability at https://www.name.com/names using the bulk search utility, sort by price, and go! \n")
     f.write("Be sure to check out DavidInfosec.com for more awesome tools! " + '\n\n')
     f.write("Your generated domains:\n")
-    combineLists()
-    subprocess.Popen(completeName, shell=True)
+    # End of Section B
+    f.write('\n'.join(result_list))
+
+
     
-    # clipboard.copy(fo)
-pyperclip.copy(open(completeName, 'r').read())
+
+    
+subprocess.Popen(completeName, shell=True)
+
 
 def help():
     print("Usage: python dnn.py [options]\n")
