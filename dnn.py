@@ -15,6 +15,7 @@ parser.add_argument("-LP", "--listpath", help="Path to wordlists directory", def
 parser.add_argument("-L1", "--wordlist1", help="Path to wordlist1", default='sampleList1.txt', type=str)
 parser.add_argument("-L2", "--wordlist2", help="Path to wordlist2", default='sampleList2.txt', type=str)
 parser.add_argument("-OA", "--outputamount", help="Number of domains to output", default=100, type=int)
+parser.add_argument("-TS", "--textsummary", help="Pops up a text file recap", action='store_true')
 args = parser.parse_args()
 
 #paths take in arguments
@@ -85,19 +86,21 @@ with open(completeName, 'w') as f:
     # End of Section B
     f.write('\n'.join(result_list))
 
-os.startfile(completeName)
+if args.textsummary:
+    os.startfile(completeName)
 
 def help():
     print("Usage: python dnn.py [options]\n")
     print("Options:")
     print("-TLD, --extension\t\tDomain extension/TLD (default: '.com')")
     print("-RP, --resultspath\t\tPath to save the generated domain list (default: 'Results')")
-    print("-LP, --listpath\tPath to wordlists directory (default: 'Word Lists')")
+    print("-LP, --listpath\t\tPath to wordlists directory (default: 'Word Lists')")
     print("-L1, --wordlist1\t\tPath to wordlist 1 (default: 'sampleList1.txt')")
     print("-L2, --wordlist2\t\tPath to wordlist 2 (default: 'sampleList2.txt')")
-    print("-OA, --outputamount\t\tNumber of domains to output (default is 100)")
+    print("-OA, --outputamount\t\tNumber of domains to output (default: 100)")
+    print("-TS, --textsummary\t\tPops up a text file recap of the generated domains (default: False)")
     print("-h, --help\t\tShow this help menu\n")
-    print("Example: python dnn.py -TLD '.com' -RP 'my_results' -LP 'my_wordlists' -L1 'list1.txt' -L2 'list2.txt'")
+    print("Example: python dnn.py -TLD '.com' -RP 'my_results' -LP 'my_wordlists' -L1 'list1.txt' -L2 'list2.txt' -TS")
 
 def main():
     if __name__ == "__main__":
