@@ -61,7 +61,7 @@ with open(completeName, 'w') as f:
                 domain = resultB + resultA + resultTLD
             result_list.append(domain)  # Append the domain to the result list
             f.write(domain)  # Write the domain to the file
-            if (count < 500):
+            if (count < args.outputamount):
                 f.write('\n')
         return result_list  # Return the result list
     
