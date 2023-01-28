@@ -16,8 +16,8 @@ The script dnn.py can be run from the command line by calling python dnn.py with
     -LP or --listpath : Path to wordlists directory (default is 'Word Lists').
     -L1 or --wordlist1 : Path to wordlist 1 (default is 'sampleList1.txt').
     -L2 or --wordlist2 : Path to wordlist 2 (default is 'sampleList2.txt').
-    -L2 or --wordlist2 : Path to wordlist 2 (default is 'sampleList2.txt').
     -OA or --outputamount: Number of domains to output (default is 100, type=int)
+    -h or --help: Refer to the help menu
     
 ## Example
 
