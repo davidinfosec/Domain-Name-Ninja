@@ -26,7 +26,7 @@ This command will run the script with the TLDs '.com', save the generated domain
 
 ## Note
 
-Be sure to check the availability of the generated domain names at [https://www.name.com/names](https://www.name.com/names) using the bulk search utility, sort by price, and go! Also, check out DavidInfosec.com for more awesome tools!
+Be sure to check the availability of the generated domain names at [https://www.name.com/names](https://www.name.com/names) using the bulk search utility, sort by price, and go! Also, check out DavidInfosec.com or follow me on GitHub for more awesome tools!
 
 
 ## Images
