@@ -1,0 +1,7 @@
+WordList1 and WordList2 have been combined with your preferred TLD(s): .com
+
+WordList1: C:/Users/David/Desktop/David Domain Finder V3/wLists/StatesAbr.txt
+WordList2: C:/Users/David/Desktop/David Domain Finder V3/wLists/Test List A.txt
+
+Be sure to check out DavidInfosec.com for more awesome tools! 
+
