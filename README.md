@@ -7,7 +7,7 @@ This is David's Domain Finder with a fresh coat of paint. Now accepting argument
 
 This script is a domain name generator that takes in two wordlists, combines them with a random TLD (top-level domain), and generates a new list of domain names. The generated domain names are saved to a file and also copied to the clipboard.
 
-##Usage
+## Usage
 
 The script dnn.py can be run from the command line by calling python dnn.py with the following optional arguments:
 
@@ -17,7 +17,7 @@ The script dnn.py can be run from the command line by calling python dnn.py with
     -L1 or --wordlist1 : Path to wordlist 1 (default is 'sampleList1.txt').
     -L2 or --wordlist2 : Path to wordlist 2 (default is 'sampleList2.txt').
 
-##Example
+## Example
 
 python dnn.py -TLD ".com" -RP "myResults" -LP "myWordLists" -L1 "myList1.txt" -L2 "myList2.txt"
 
