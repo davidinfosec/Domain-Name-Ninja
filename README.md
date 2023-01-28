@@ -9,7 +9,7 @@ This script is a domain name generator that takes in two wordlists, combines the
 
 ## Usage
 
-The script can be run from the command line by calling `python script_name.py` with the following optional arguments:
+The script can be run from the command line by calling `python dnn.py` with the following optional arguments:
 
 -   `-TLD` or `--TLD` : Domain extension/TLD (default is '.com, .org, .co').
 -   `-sP` or `--savePath` : Path to save the generated domain list (default is 'Results').
@@ -20,7 +20,7 @@ The script can be run from the command line by calling `python script_name.py` w
 
 ## Example
 
-`python script_name.py -TLD .com, .net, .org -sP myResults -wlP myWordLists -L1 myList1.txt -L2 myList2.txt`
+`python dnn.py -TLD .com, .net, .org -sP myResults -wlP myWordLists -L1 myList1.txt -L2 myList2.txt`
 
 This command will run the script with the TLDs '.com', '.net', and '.org', save the generated domain list to the 'myResults' directory, use the wordlists located in the 'myWordLists' directory, and combine the lists 'myList1.txt' and 'myList2.txt'.
 
