@@ -77,7 +77,6 @@ with open(completeName, 'r') as f:
 
 with open(completeName, 'w') as f:
     # Section B Write lines to the text file
-    f.write("web browser test?")
     f.write("WordList1 and WordList2 have been combined and copied to your clipboard with your preferred TLD(s): " + ', '.join(TLDs) + '\n\n')
     f.write("WordList1: " + WordList1 + "\nWordList2: " + WordList2 + "\n\n")
     f.write("Check their availability at https://www.name.com/names using the bulk search utility, sort by price, and go! \n")
