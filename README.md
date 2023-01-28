@@ -6,14 +6,14 @@ This is David's Domain Finder with a fresh coat of paint. Now accepting argument
 ## Usage
 
 The script dnn.py can be run from the command line by calling python dnn.py with the following optional arguments:
-`-TLD or --extension : Domain extension/TLD (default is '.com').
+-TLD or --extension : Domain extension/TLD (default is '.com').
 -RP or --resultspath : Path to save the generated domain list (default is 'Results').
 -LP or --listpath : Path to wordlists directory (default is 'Word Lists').
 -L1 or --wordlist1 : Path to wordlist 1 (default is 'sampleList1.txt').
 -L2 or --wordlist2 : Path to wordlist 2 (default is 'sampleList2.txt').
 -OA or --outputamount: Number of domains to output (default is 100, type=int)
 -TS or --textsummary : Pops up a text file recap of the generated domains (default is False)
--h or --help: Refer to the help menu`
+-h or --help: Refer to the help menu
 
 ## Example
 
