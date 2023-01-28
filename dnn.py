@@ -14,6 +14,7 @@ parser.add_argument("-RP", "--resultspath", help="Path to save the generated dom
 parser.add_argument("-LP", "--listpath", help="Path to wordlists directory", default='Word Lists', type=str)
 parser.add_argument("-L1", "--wordlist1", help="Path to wordlist1", default='sampleList1.txt', type=str)
 parser.add_argument("-L2", "--wordlist2", help="Path to wordlist2", default='sampleList2.txt', type=str)
+parser.add_argument("-OA", "--outputamount", help="Number of domains to output", default=100, type=int)
 args = parser.parse_args()
 
 #paths take in arguments
@@ -48,7 +49,7 @@ with open(completeName, 'w') as f:
     def combineLists():
         result_list = []  # Create an empty list to store the results
         count = 0
-        while (count < 500):
+        while (count < args.outputamount):
             count = count + 1
             resultTLD = (random.choice(TLDs))
             resultA = (random.choice(open(WordList1).read().split()).strip())
