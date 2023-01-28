@@ -9,7 +9,7 @@ import time
 random.seed(time.time())
 
 parser = argparse.ArgumentParser()
-parser.add_argument("-TLD", "--TLD", help="Domain extension/TLD", default=".com, .org, .co", type=str)
+parser.add_argument("-TLD", "--TLD", help="Domain extension/TLD", default=".com", type=str)
 parser.add_argument("-sP", "--savePath", help="Path to save the generated domain list", default='Results', type=str)
 parser.add_argument("-wlP", "--wordListPath", help="Path to wordlists directory", default='wLists', type=str)
 parser.add_argument("-L1", "--wordList1", help="Path to wordlist 1", default='sampleList1.txt', type=str)
@@ -89,10 +89,9 @@ def help():
     print("-h, --help\t\tShow this help menu\n")
     print("Example: python dnn.py -TLD .com -sP my_results -wlP my_wordlists -L1 list1.txt -L2 list2.txt")
 
-
-
-if __name__ == "__main__":
-    if "-h" in sys.argv or "--help" in sys.argv:
-        help()
-    else:
-        main()
+def main():
+    if __name__ == "__main__":
+        if "-h" in sys.argv or "--help" in sys.argv:
+            help()
+        else:
+            main()
