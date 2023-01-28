@@ -11,7 +11,7 @@ This script is a domain name generator that takes in two wordlists, combines the
 
 The script can be run from the command line by calling `python dnn.py` with the following optional arguments:
 
--   `-TLD` or `--TLD` : Domain extension/TLD (default is '.com, .org, .co').
+-   `-TLD` or `--TLD` : Domain extension/TLD (default is '.com').
 -   `-sP` or `--savePath` : Path to save the generated domain list (default is 'Results').
 -   `-wlP` or `--wordListPath` : Path to wordlists directory (default is 'wLists').
 -   `-L1` or `--wordList1` : Path to wordlist 1 (default is 'sampleList1.txt').
