@@ -10,12 +10,14 @@ random.seed(time.time())
 
 parser = argparse.ArgumentParser()
 parser.add_argument("-TLD", "--extension", help="Domain extension/TLD", default=".com", type=str)
+parser.add_argument("-FN", "--filename", help="custom file name prefix", default="newList", type=str)
 parser.add_argument("-RP", "--resultspath", help="Path to save the generated domain list results", default='Results', type=str)
-parser.add_argument("-LP", "--listpath", help="Path to wordlists directory", default='Word Lists', type=str)
+parser.add_argument("-LP", "--listpath", help="Path to wordlists directory", default='WordLists', type=str)
 parser.add_argument("-L1", "--wordlist1", help="Path to wordlist1", default='sampleList1.txt', type=str)
 parser.add_argument("-L2", "--wordlist2", help="Path to wordlist2", default='sampleList2.txt', type=str)
 parser.add_argument("-OA", "--outputamount", help="Number of domains to output", default=100, type=int)
-parser.add_argument("-TS", "--textsummary", help="Pops up a text file recap", action='store_true')
+parser.add_argument("-TS", "--textsummary", help="Pops up a text file recap", action='store_true', default=False)
+parser.add_argument("-S", "--save", help="allows you to save output", action='store_true', default=True)
 args = parser.parse_args()
 
 #paths take in arguments
@@ -23,14 +25,14 @@ save_path = args.resultspath
 wL_path = args.listpath
 
 #change file name prefix
-newList = "newList"
+filenamePrefix = args.filename
 
 #TLD/Extension take in arguments
 TLDs = args.extension.split(", ")
 
 #change file suffix & output
 suffix = datetime.datetime.now().strftime("%y%m%d_%H%M%S")
-filename = "_".join([newList, suffix]) # e.g. 'mylogfile_120508_171442'
+filename = "_".join([filenamePrefix, suffix]) # e.g. 'mylogfile_120508_171442'
 
 #change file extension
 completeName = os.path.join(save_path, filename+".txt")
@@ -60,8 +62,8 @@ with open(completeName, 'w') as f:
                 domain = resultA + resultB + resultTLD
             else:
                 domain = resultB + resultA + resultTLD
-            result_list.append(domain)  # Append the domain to the result list
-            f.write(domain)  # Write the domain to the file
+            result_list.append(domain)  # Append the domain to the result list - this assists in writing to the actual file
+            f.write(domain)  # Write the domain to the file -- this assists in writing to clipboard
             if (count < args.outputamount):
                 f.write('\n')
         return result_list  # Return the result list
@@ -88,7 +90,7 @@ with open(completeName, 'w') as f:
 
 if args.textsummary:
     os.startfile(completeName)
-
+  
 def help():
     print("Usage: python dnn.py [options]\n")
     print("Options:")

@@ -1,0 +1,3 @@
+>new argument for file name specification (prefix before the date and time only)
+>new basic wizard-like batch file that simplifies things and allows a single key to be pressed to re-run settings
+>changed "Word Lists" default path to "WordLists" to avoid any potential issues with characters
