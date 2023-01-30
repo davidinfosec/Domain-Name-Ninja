@@ -18,8 +18,8 @@ The script dnn.py can be run from the command line by calling python dnn.py with
 
 ## Example
 
-``python dnn.py -TLD '.com' -RP 'my_results' -LP 'my_wordlists' -L1 'list1.txt' -L2 'list2.txt' -TS -FN 'awesomedomains```
-
+`python dnn.py -TLD '.com' -RP 'my_results' -LP 'my_wordlists' -L1 'list1.txt' -L2 'list2.txt' -TS -FN 'awesomedomains'
+`
 This command will run the script with the TLD '.com', save the generated domain list to the 'my_results' directory, use the wordlists located in the 'my_wordlists' directory, and combine the lists 'list1.txt' and 'list2.txt'. It will also show a text summary of the generated domains and save the generated domain list to a text file named 'awesomedomains_<current date and time>.txt' in the specified results path directory, and copy it to the clipboard.
 
 To view the help menu, run the script with the -h or --help option.
