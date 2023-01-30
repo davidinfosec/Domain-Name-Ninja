@@ -25,7 +25,7 @@ This command will run the script with the TLD '.com', save the generated domain 
 
 To view the help menu, run the script with the -h or --help option.
 
-example : python dnn.py --help
+example : `python dnn.py --help`
 
 
 ## Note
