@@ -17,10 +17,9 @@ The script dnn.py can be run from the command line by calling python dnn.py with
 
 ## Example
 
-``python dnn.py -TLD ".com" -RP "myResults" -LP "myWordLists" -L1 "myList1.txt" -L2 "myList2.txt" -OA "100" -TS``
+``python dnn.py -TLD '.com' -RP 'my_results' -LP 'my_wordlists' -L1 'list1.txt' -L2 'list2.txt' -TS -FN 'awesomedomains``
 
-This command will run the script with the TLDs '.com', save the generated domain list to the 'myResults' directory, use the wordlists located in the 'myWordLists' directory, and combine the lists 'myList1.txt' and 'myList2.txt'. It will output 100 domains. The script will also open a text file with a summary of the generated domains.
-The script will then write the generated domain list to a text file, and also copy it to the clipboard. The text file will be named in the format of 'newList_<current date and time>.txt' and saved in the specified results path directory.
+This command will run the script with the TLD '.com', save the generated domain list to the 'my_results' directory, use the wordlists located in the 'my_wordlists' directory, and combine the lists 'list1.txt' and 'list2.txt'. It will also show a text summary of the generated domains and save the generated domain list to a text file named 'awesomedomains_<current date and time>.txt' in the specified results path directory, and copy it to the clipboard.
 
 To view the help menu, run the script with the -h or --help option.
 
@@ -32,12 +31,17 @@ example : python dnn.py --help
 Be sure to check the availability of the generated domain names at [https://www.name.com/names](https://www.name.com/names) using the bulk search utility, sort by price, and go! Also, check out https://www.DavidInfosec.com or follow me on GitHub for more awesome tools!
 
 
-## Images
+## Images - dnn.py
 Run it default with the stored sample lists:
-![alt text](https://i.imgur.com/SdRwTla.png)
+![Domian Name Ninja command line](https://i.imgur.com/SdRwTla.png)
 
 File opens with important information:
-![alt text](https://i.imgur.com/UIaBp83.png)
+![Domain Name Ninja text summary](https://i.imgur.com/UIaBp83.png)
 
 Enjoy bulk searching for your new domain names:
-![alt text](https://i.imgur.com/cWZLqj7.png)
+![bulk search on Name.com](https://i.imgur.com/cWZLqj7.png)
+
+### Images - run.bat
+![Domain Name Ninja batch file](https://i.imgur.com/vA9Hpy2.png)
+![Domain Name Ninja batch file run](https://i.imgur.com/rTeSgS5.png)
+

@@ -101,8 +101,9 @@ def help():
     print("-L2, --wordlist2\t\tPath to wordlist 2 (default: 'sampleList2.txt')")
     print("-OA, --outputamount\t\tNumber of domains to output (default: 100)")
     print("-TS, --textsummary\t\tPops up a text file recap of the generated domains (default: False)")
+    print("-FN, --textsummary\t\tAllows user to specify a custom filename prefix. (default: False)")
     print("-h, --help\t\tShow this help menu\n")
-    print("Example: python dnn.py -TLD '.com' -RP 'my_results' -LP 'my_wordlists' -L1 'list1.txt' -L2 'list2.txt' -TS")
+    print("Example: python dnn.py -TLD '.com' -RP 'my_results' -LP 'my_wordlists' -L1 'list1.txt' -L2 'list2.txt' -TS -FN 'awesomedomains'")
 
 def main():
     if __name__ == "__main__":
