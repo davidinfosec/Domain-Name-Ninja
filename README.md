@@ -10,7 +10,7 @@ This is David's Domain Finder with a fresh coat of paint. Now accepting argument
 5. Take note of the file path of the extracted folder. For example, on Windows, the file path might look like "C:\Users<username><somelocation>\Domain-Name-Ninja-main"
 6. Open a terminal or command prompt instance on your computer.
 7. Change your current directory to the location of the extracted folder using the "cd" command.
-  For instance, if the file path is ``C:\Users<username><somelocation>\Domain-Name-Ninja-main``, you would enter the following command:
+  For instance, if the file path is "C:\Users<username><somelocation>\Domain-Name-Ninja-main", you would enter the following command:
   ``cd C:\Users\<username>\<somelocation>\Domain-Name-Ninja-main\``
   
 8. Once you are in the correct directory, run the program by executing the command:
