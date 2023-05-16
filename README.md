@@ -2,6 +2,22 @@
 
 This is David's Domain Finder with a fresh coat of paint. Now accepting arguments and ultimately streamlining the process. Read through the pictures to understand how it works, and streamline your domain hand-registrations. Let Domain Name Ninja do the heavy lifting.
 
+## Getting Started
+1. If you haven't already installed Python, please download and install it from the official Python website (https://www.python.org) based on your operating system.
+2. Clone the repository or download the .zip file from the GitHub repository containing the Domain Name Ninja application.
+3. Extract the contents of the downloaded .zip file to a location of your choice on your computer.
+4. Open the extracted folder named "Domain-Name-Ninja-main."
+5. Take note of the file path of the extracted folder. For example, on Windows, the file path might look like "C:\Users<username><somelocation>\Domain-Name-Ninja-main"
+6. Open a terminal or command prompt instance on your computer.
+7. Change your current directory to the location of the extracted folder using the "cd" command. For instance, if the file path is "C:\Users<username><somelocation>\Domain-Name-Ninja-main", you would enter the following command:
+  ``cd C:\Users\<username>\<somelocation>\Domain-Name-Ninja-main\``
+  
+8. Once you are in the correct directory, run the program by executing the command:
+  ``python dnn.py``
+
+By following these instructions, you should be able to run the Domain Name Ninja application successfully.
+
+  
 ## Usage
 
 The script dnn.py can be run from the command line by calling python dnn.py with the following optional arguments:
