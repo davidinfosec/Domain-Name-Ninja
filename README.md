@@ -1,6 +1,6 @@
 # Domain-Name-Ninja
 
-Domain Name Ninja, a nimble and agile tool, swiftly slices through word lists like a masterful ninja. With expert precision, it reassembles them, creating a powerful arsenal of captivating domain names. Unleash the stealth and finesse of Domain Name Ninja to conquer the domain registration battlefield with ease.
+Domain Name Ninja, a nimble and agile tool, swiftly slices through word lists like a masterful ninja. With precision and artistry, it forges unique and powerful domain names. Unleash the stealth and finesse of Domain Name Ninja to conquer the domain registration battlefield with ease. 
 
 ## Getting Started
 1. If you haven't already installed Python, please download and install it from the official Python website (https://www.python.org) based on your operating system.
