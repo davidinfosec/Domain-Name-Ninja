@@ -1,6 +1,6 @@
 # Domain-Name-Ninja
 
-This is David's Domain Finder with a fresh coat of paint. Now accepting arguments and ultimately streamlining the process. Read through the pictures to understand how it works, and streamline your domain hand-registrations. Let Domain Name Ninja do the heavy lifting.
+Domain Name Ninja, a nimble and agile tool, swiftly slices through word lists like a masterful ninja. With expert precision, it reassembles them, creating a powerful arsenal of captivating domain names. Unleash the stealth and finesse of Domain Name Ninja to conquer the domain registration battlefield with ease.
 
 ## Getting Started
 1. If you haven't already installed Python, please download and install it from the official Python website (https://www.python.org) based on your operating system.
