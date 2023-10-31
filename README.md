@@ -13,8 +13,12 @@ Domain Name Ninja, a nimble and agile tool, swiftly slices through word lists li
   For instance, if the file path is "C:\Users<username><somelocation>\Domain-Name-Ninja-main", you would enter the following command:
   ``cd C:\Users\<username>\<somelocation>\Domain-Name-Ninja-main\``
   
-8. Once you are in the correct directory, run the program by executing the command:
-  ``python dnn.py``
+8. Once you are in the correct directory, run the following command to install dependencies:
+
+   ``pip install pyperclip``
+
+9. Now, simply execute the program by executing the command:
+  ``python dnn.py --help``
 
 By following these instructions, you should be able to run the Domain Name Ninja application successfully.
 
